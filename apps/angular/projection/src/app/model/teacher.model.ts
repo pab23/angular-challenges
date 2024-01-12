@@ -1,3 +1,5 @@
+import { Person } from './person.model';
+
 export const subject = [
   'Sciences',
   'History',
@@ -7,9 +9,6 @@ export const subject = [
 ] as const;
 export type Subject = (typeof subject)[number];
 
-export interface Teacher {
-  id: number;
-  firstName: string;
-  lastName: string;
+export interface Teacher extends Person {
   subject: Subject;
 }

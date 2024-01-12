@@ -1,9 +1,7 @@
+import { Person } from './person.model';
 import { Teacher } from './teacher.model';
 
-export interface Student {
-  id: number;
-  firstName: string;
-  lastName: string;
+export interface Student extends Person {
   mainTeacher: Teacher;
   school: string;
 }
